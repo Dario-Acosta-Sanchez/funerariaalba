@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Funeraria Alba — Acompañamiento sereno, Córdoba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: { neutral: {
+    200:'#e6e2da', 300:'#d2ccc0', 400:'#a9a194', 500:'#83796b', 700:'#4a4439', 900:'#2c2820'
+  } } } } }
+</script>
+<style>
+:root{
+  --bg:#f6f3ee; --card:#fffcf8; --line:#e6e0d5;
+  --ink:#3a352d; --ink-soft:#7a7264;
+  --sage:#7c8b76; --sage2:#67765f;
+  --gold:#c9a86a;
+  --rose:#c79b8c;
+}
+*{font-family:'Albert Sans',sans-serif;font-weight:400}
+h1,h2,h3{font-family:'Lora',serif;font-weight:500;letter-spacing:0}
+body{background:var(--bg);color:var(--ink);line-height:1.65}
+.serene{background:rgba(255,252,248,.7);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.7)}
+.sage{color:var(--sage2)}
+.sage-bg{background:var(--sage)}
+.gold{color:#a9844a}
+.btn-primary{background:var(--sage);color:#fffcf8;font-weight:500;transition:background .25s, box-shadow .25s;border-radius:10px;padding:15px 30px;border:none;cursor:pointer;letter-spacing:.01em}
+.btn-primary:hover{background:var(--sage2);box-shadow:0 12px 28px -14px rgba(103,118,95,.45)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:14px 29px;font-weight:500;transition:border-color .25s, color .25s;background:#fffcf8}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage2)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;transition:box-shadow .3s, border-color .3s}
+.card:hover{border-color:var(--sage);box-shadow:0 14px 34px -22px rgba(124,139,118,.35)}
+.fade-in{animation:fadein .6s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.step{border:1px solid var(--line);border-radius:14px;background:#fffcf8;cursor:pointer;transition:border-color .25s, background .25s}
+.step:hover{border-color:var(--sage)}
+.step.open{border-color:var(--sage);background:#fbf8f2}
+.step-num{width:34px;height:34px;border-radius:9999px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:.95rem;color:var(--ink-soft);flex-shrink:0;transition:all .25s}
+.step.open .step-num{background:var(--sage);border-color:var(--sage);color:#fffcf8}
+.tel-link{display:inline-flex;align-items:center;gap:.6rem;font-family:'Lora',serif;font-size:1.4rem;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:.15rem;transition:color .2s}
+.tel-link:hover{color:var(--sage2)}
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:#d8d2c4;border-radius:8px}
+
+/* Único gesto de movimiento: una luz muy tenue que respira en el fondo del hero — nada más se anima en esta página */
+.breathe{position:absolute;border-radius:9999px;filter:blur(80px);opacity:.35;animation:breathe 9s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.28}50%{transform:scale(1.18);opacity:.4}}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-50 serene">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <span class="font-medium text-xl tracking-tight" style="font-family:'Lora',serif">Funeraria <span class="sage italic">Alba</span></span>
+    <div class="hidden md:flex items-center gap-8 text-sm text-neutral-500">
+      <a href="#ahora" class="hover:text-[var(--ink)] transition">Si lo necesitas ahora</a>
+      <a href="#servicios" class="hover:text-[var(--ink)] transition">Cómo acompañamos</a>
+      <a href="#anticipacion" class="hover:text-[var(--ink)] transition">Pensar con tiempo</a>
+      <a href="#contacto" class="hover:text-[var(--ink)] transition">Contacto</a>
+    </div>
+    <a href="tel:+34957123456" class="btn-primary text-sm py-3 px-6">📞 Atención 24h</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="pt-40 pb-20 px-6 relative overflow-hidden">
+  <div class="breathe" style="width:520px;height:520px;background:var(--sage);top:-180px;left:-120px"></div>
+  <div class="breathe" style="width:420px;height:420px;background:var(--gold);bottom:-160px;right:-100px;animation-delay:-4.5s"></div>
+  <div class="max-w-3xl mx-auto text-center relative">
+    <p class="text-sm text-[var(--ink-soft)] mb-5 tracking-wide">Córdoba capital · disponibles las 24 horas, todos los días del año</p>
+    <h1 class="text-3xl md:text-5xl leading-snug mb-7">
+      Estamos aquí para ocuparnos de lo difícil,<br/>
+      <span class="italic sage">para que tú puedas ocuparte de despedirte</span>
+    </h1>
+    <p class="text-lg text-[var(--ink-soft)] max-w-xl mx-auto mb-10">
+      Si acabas de perder a alguien, no hace falta que sepas qué hacer ahora mismo. Llámanos: nos encargamos del traslado, del papeleo y de organizar la despedida con calma, a tu ritmo y según lo que esa persona — y vosotros — hubierais querido.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+      <a href="tel:+34957123456" class="tel-link">📞 957 12 34 56 — línea de atención 24 horas</a>
+    </div>
+  </div>
+</header>
+
+<!-- SI LO NECESITAS AHORA — guía paso a paso, sin gamificación -->
+<section id="ahora" class="py-16 px-6">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-10">
+      <span class="sage text-sm tracking-wide">Si ha ocurrido hace muy poco</span>
+      <h2 class="text-2xl md:text-4xl mt-2 mb-3">¿Qué se hace ahora? Te lo explicamos con calma</h2>
+      <p class="text-[var(--ink-soft)]">No tienes que resolver todo esto solo, ni de golpe. Esto es, simplemente, lo que suele venir a continuación — y en cada uno de estos pasos, te acompañamos nosotros.</p>
+    </div>
+
+    <div class="space-y-3" id="pasos">
+      <div class="step" onclick="togglePaso(this, 1)">
+        <div class="flex items-center gap-4 p-5">
+          <span class="step-num">1</span>
+          <h3 class="font-medium text-lg flex-1">Llámanos, sea la hora que sea</h3>
+          <span class="paso-arrow text-[var(--ink-soft)]">＋</span>
+        </div>
+        <div class="paso-body hidden px-5 pb-5 pl-[4.4rem] text-[var(--ink-soft)]">
+          Tanto si ha ocurrido en casa, en un hospital o en una residencia, nuestro equipo se desplaza para hacerse cargo del traslado con todo el cuidado y la discreción que merece ese momento. No necesitas tener nada decidido todavía — solo descolgar el teléfono.
+        </div>
+      </div>
+
+      <div class="step" onclick="togglePaso(this, 2)">
+        <div class="flex items-center gap-4 p-5">
+          <span class="step-num">2</span>
+          <h3 class="font-medium text-lg flex-1">Nosotros nos encargamos del papeleo</h3>
+          <span class="paso-arrow text-[var(--ink-soft)]">＋</span>
+        </div>
+        <div class="paso-body hidden px-5 pb-5 pl-[4.4rem] text-[var(--ink-soft)]">
+          Certificado médico, inscripción en el registro civil, licencias de traslado o enterramiento — toda la gestión administrativa la tramitamos por ti. Solo te pediremos los documentos básicos de la persona fallecida y de quien firme en su nombre.
+        </div>
+      </div>
+
+      <div class="step" onclick="togglePaso(this, 3)">
+        <div class="flex items-center gap-4 p-5">
+          <span class="step-num">3</span>
+          <h3 class="font-medium text-lg flex-1">Hablamos, sin prisa, de cómo queréis despediros</h3>
+          <span class="paso-arrow text-[var(--ink-soft)]">＋</span>
+        </div>
+        <div class="paso-body hidden px-5 pb-5 pl-[4.4rem] text-[var(--ink-soft)]">
+          Ceremonia civil o religiosa, íntima o abierta, en nuestra sala o en otro lugar con un significado especial — te enseñamos las opciones sin presión y ajustamos cada detalle a lo que esa persona hubiera querido, y a lo que vosotros necesitéis.
+        </div>
+      </div>
+
+      <div class="step" onclick="togglePaso(this, 4)">
+        <div class="flex items-center gap-4 p-5">
+          <span class="step-num">4</span>
+          <h3 class="font-medium text-lg flex-1">Avisamos a quien tú nos digas</h3>
+          <span class="paso-arrow text-[var(--ink-soft)]">＋</span>
+        </div>
+        <div class="paso-body hidden px-5 pb-5 pl-[4.4rem] text-[var(--ink-soft)]">
+          Si lo prefieres, nos encargamos de avisar a familiares, amigos o compañeros de trabajo, y de coordinar los horarios del velatorio para que tú no tengas que repetir la misma llamada veinte veces en un día tan difícil.
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 card p-6 text-center">
+      <p class="text-[var(--ink-soft)]">Si lo que necesitas es hablar con alguien ahora mismo, no hace falta que sigas leyendo.</p>
+      <a href="tel:+34957123456" class="tel-link mt-2 inline-flex">📞 957 12 34 56 — disponible ahora</a>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO ACOMPAÑAMOS -->
+<section id="servicios" class="py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="mb-12 max-w-xl">
+      <span class="sage text-sm tracking-wide">Cómo acompañamos</span>
+      <h2 class="text-2xl md:text-4xl mt-2">Cada despedida es distinta — la nuestra se adapta a la vuestra</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 gap-5">
+      <div class="card p-7">
+        <h3 class="font-medium text-lg mb-2">Tanatorio y velatorio</h3>
+        <p class="text-[var(--ink-soft)]">Salas tranquilas, luminosas y con espacio suficiente para que cada persona viva la despedida a su manera — algunas prefieren acompañar en silencio, otras necesitan hablar.</p>
+      </div>
+      <div class="card p-7">
+        <h3 class="font-medium text-lg mb-2">Ceremonias a medida</h3>
+        <p class="text-[var(--ink-soft)]">Civiles, religiosas de cualquier confesión, o simplemente unas palabras entre quienes la quisieron. Ayudamos a dar forma a la ceremonia, pero nunca decidimos por vosotros.</p>
+      </div>
+      <div class="card p-7">
+        <h3 class="font-medium text-lg mb-2">Traslados, aquí y a otras ciudades</h3>
+        <p class="text-[var(--ink-soft)]">Nos encargamos de los traslados dentro de Córdoba y también a otras provincias o países, con toda la documentación necesaria ya tramitada.</p>
+      </div>
+      <div class="card p-7">
+        <h3 class="font-medium text-lg mb-2">Floristería y recuerdos</h3>
+        <p class="text-[var(--ink-soft)]">Coronas, centros y detalles personalizados — y, si lo deseáis, un pequeño espacio físico donde dejar mensajes o fotografías durante el velatorio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA CUANDO LLEGUE EL MOMENTO — previsión, sin presión -->
+<section id="anticipacion" class="py-16 px-6">
+  <div class="max-w-3xl mx-auto card p-9 md:p-12">
+    <span class="sage text-sm tracking-wide">Pensar en ello con tiempo</span>
+    <h2 class="text-2xl md:text-4xl mt-2 mb-4">Dejarlo todo decidido es, también, una forma de cuidar a los tuyos</h2>
+    <p class="text-[var(--ink-soft)] mb-4">
+      Hablar de esto no es fácil, y nadie tiene por qué hacerlo si no le sirve de ayuda. Pero algunas personas prefieren decidir con calma — qué tipo de despedida quieren, qué música, qué se diga o no se diga — para que, cuando llegue el momento, sus seres queridos solo tengan que ocuparse de estar presentes, no de adivinar.
+    </p>
+    <p class="text-[var(--ink-soft)] mb-7">
+      Si te interesa, podemos sentarnos contigo — sin compromiso y sin ningún tipo de presión — para ir dejando esas decisiones por escrito. Es una conversación que se puede tener en varias visitas, al ritmo que tú marques.
+    </p>
+    <a href="#contacto" class="btn-ghost">Concertar una conversación tranquila</a>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section class="py-16 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+      <span class="sage text-sm tracking-wide">Algunas palabras de quienes confiaron en nosotros</span>
+      <h2 class="text-2xl md:text-4xl mt-2">No buscamos reseñas — pero estas nos las dejaron, y las guardamos con cariño</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card p-7">
+        <p class="text-[var(--ink)] mb-4 italic" style="font-family:'Lora',serif">"Llamamos a las tres de la madrugada y nos atendieron como si fuéramos lo único que importaba esa noche. No tuvimos que explicar nada dos veces."</p>
+        <p class="text-sm text-[var(--ink-soft)]">— familia acompañada en el barrio de Levante</p>
+      </div>
+      <div class="card p-7">
+        <p class="text-[var(--ink)] mb-4 italic" style="font-family:'Lora',serif">"Mi padre lo había dejado todo decidido con ellos dos años antes. El día más difícil de nuestras vidas, lo único que tuvimos que hacer fue estar juntos."</p>
+        <p class="text-sm text-[var(--ink-soft)]">— familia de Ciudad Jardín</p>
+      </div>
+      <div class="card p-7">
+        <p class="text-[var(--ink)] mb-4 italic" style="font-family:'Lora',serif">"Nunca nos sentimos un trámite. Cada pregunta tenía una respuesta hecha con cuidado, y eso, en ese momento, se nota más de lo que uno cree."</p>
+        <p class="text-sm text-[var(--ink-soft)]">— familia del Centro</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-16 px-6">
+  <div class="max-w-3xl mx-auto card p-9 md:p-12 text-center">
+    <h2 class="text-2xl md:text-4xl mb-4">Estamos a una llamada de distancia</h2>
+    <p class="text-[var(--ink-soft)] max-w-xl mx-auto mb-8">
+      Tanto si necesitas ayuda ahora mismo como si solo quieres informarte con calma para más adelante, puedes llamarnos o pasarte por nuestras instalaciones. No hay pregunta que sea inoportuna.
+    </p>
+    <a href="tel:+34957123456" class="tel-link mb-3 inline-flex">📞 957 12 34 56 — disponible las 24 horas</a>
+    <p class="text-[var(--ink-soft)] text-sm mt-4">Avenida de la Arruzafa, 11 · Córdoba — recepción abierta de 9:00 a 20:00, llamadas atendidas a cualquier hora</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 px-6 border-t border-neutral-700">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[var(--ink-soft)]">
+    <span class="font-medium" style="font-family:'Lora',serif">Funeraria <span class="sage italic">Alba</span></span>
+    <p>Avenida de la Arruzafa, 11 · Córdoba</p>
+    <p>© 2026 Funeraria Alba. Acompañando con calma desde hace 30 años.</p>
+  </div>
+</footer>
+
+<script>
+function togglePaso(el, n){
+  const body = el.querySelector('.paso-body');
+  const arrow = el.querySelector('.paso-arrow');
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('#pasos .step').forEach(s => {
+    s.classList.remove('open');
+    s.querySelector('.paso-body').classList.add('hidden');
+    s.querySelector('.paso-arrow').textContent = '＋';
+  });
+  if (!isOpen){
+    el.classList.add('open');
+    body.classList.remove('hidden');
+    body.classList.add('fade-in');
+    arrow.textContent = '－';
+  }
+}
+</script>
+
+</body>
+</html>
